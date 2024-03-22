@@ -1,15 +1,39 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
+  "sepA": {
+    "title": "Getting Started",
+    "type": "separator"
   },
-  "contact": {
-    "title": "Contact ↗",
+  "mm": "Add Form Testnet to Metamask",
+  "faucet": "Receive Faucet Funds",
+  "bridgeTo": "Bridge to Form Testnet",
+  "deploy": "Deploy to Form Testnet",
+  "indexers": "Data Indexers",
+  "oracles": "Oracles",
+  "aa": "Account Abstraction",
+  "website": {
+    "title": "Website ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://form.network/",
+    "newWindow": true
+  },
+  "sepB": {
+    "title": "Tools",
+    "type": "separator"
+  },
+  "explorer": {
+    "title": "Block Explorer ↗",
+    "href": "https://explorer.form.network/",
+    "newWindow": true
+  },
+  "bridge": {
+    "title": "Bridge UI ↗",
+    "href": "https://bridge.form.network/",
+    "newWindow": true
+  },
+  "info": {
+    "title": "Rollup Info Page ↗",
+    "href": "https://rollup-info.altlayer.io/public/cdk_eigenda_sepolia_testnet",
     "newWindow": true
   }
 }
