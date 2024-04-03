@@ -1,0 +1,14 @@
+# https://github.com/srvaroa/labeler
+version: 1
+issues: false
+labels:
+  - label: "XS"
+    size: { exclude-files: ["yarn.lock", "package-lock.json"], below: 11 }
+  - label: "S"
+    size: { exclude-files: ["yarn.lock", "package-lock.json"], above: 10, below: 51 }
+  - label: "M"
+    size: { exclude-files: ["yarn.lock", "package-lock.json"], above: 50, below: 201 }
+  - label: "L"
+    size: { exclude-files: ["yarn.lock", "package-lock.json"], above: 200, below: 401 }
+  - label: "XL"
+    size: { exclude-files: ["yarn.lock", "package-lock.json"], above: 400 }
