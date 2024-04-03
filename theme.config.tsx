@@ -2,9 +2,9 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>Form Testnet Docs</span>,
+  logo: <span>Xterio Chain Docs</span>,
   footer: {
-    text: 'Form Network',
+    text: 'Xterio Chain',
   },
 }
 

@@ -2,7 +2,7 @@
 
 ## What is Hardhat?
 
-Hardhat is a development environment for Ethereum that helps developers manage and automate the common tasks involved in building smart contracts and decentralized applications. It can directly interact with Form's Ethereum API, allowing for the deployment of smart contracts into the Form network.
+Hardhat is a development environment for Ethereum that helps developers manage and automate the common tasks involved in building smart contracts and decentralized applications. It can directly interact with Xterio Chain's Ethereum API, allowing for the deployment of smart contracts into the Xterio Chain.
 
 Additionally, Hardhat is a comprehensive set of tools for creating Ethereum-based software, which includes various components that aid in editing, compiling, debugging, and deploying smart contracts and decentralized applications. All of these components work together to create a complete development environment.
 
@@ -58,7 +58,7 @@ Modify the Hardhat configuration file and create a secure file to store your pri
 4. Modify the `hardhat.config.js` file
     - Import the Ethers.js plugin
     - Import the `secrets.json` file
-    - Inside the `module.exports` add the Form network configuration
+    - Inside the `module.exports` add the Xterio Chain configuration
     ```
     require('@nomiclabs/hardhat-ethers');
     const { privateKey } = require('./secrets.json');
@@ -71,9 +71,9 @@ Modify the Hardhat configuration file and create a secure file to store your pri
             url: "https://eth-rinkeby.alchemyapi.io/v2/123abc123abc123abc123abc123abcde",
             accounts: [privateKey]
         },
-        form: {
-            url: "https://rpc.form.network/http",  // form RPC URL Here
-            chainId: 1748, // form ChainID Here
+        xterio: {
+            url: "https://xterio.alt.technology",  // Xterio Chain RPC URL Here
+            chainId: 112358, // Xterio ChainID Here
         }
     },
     }
@@ -116,5 +116,5 @@ Modify the Hardhat configuration file and create a secure file to store your pri
     ```
 4. Deploy `your_contract.sol` using the command below
     ```
-    npx hardhat run scripts/deploy.js --network form
+    npx hardhat run scripts/deploy.js --network xterio
     ```
