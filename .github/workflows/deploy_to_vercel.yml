@@ -1,0 +1,63 @@
+name: Deploy To Vercel
+
+on:
+  push:
+    branches:
+      - 'release/vercel/*'
+
+jobs:
+  setup-vercel-environment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Sanitize Branch Name
+        run: |
+          echo "VERCEL_PROJECT_ENVIRONMENT=$(echo $GITHUB_REF_NAME | sed 's./.-.g')" >> $GITHUB_OUTPUT
+        id: sanitized_project_name
+      - name: Display Sanitized Project Name
+        run: echo ${{ steps.sanitized_project_name.outputs.VERCEL_PROJECT_ENVIRONMENT }}
+      - name: Get Project ID From Vercel KV
+        run: |
+          KV_OUTPUT=$(curl -s "$VERCEL_KV_ENDPOINT/get/$VERCEL_PROJECT_ENVIRONMENT" -H "Authorization: Bearer $VERCEL_KV_AUTHORIZATION_KEY" | jq -r .result)
+          echo "VERCEL_PROJECT_ID=$KV_OUTPUT" >> $GITHUB_OUTPUT
+        env:
+          VERCEL_PROJECT_ENVIRONMENT: ${{ steps.sanitized_project_name.outputs.VERCEL_PROJECT_ENVIRONMENT }}
+          VERCEL_KV_ENDPOINT: ${{ secrets.VERCEL_KV_ENDPOINT }}
+          VERCEL_KV_AUTHORIZATION_KEY: ${{ secrets.VERCEL_KV_AUTHORIZATION_KEY }}
+        id: get_project_id_from_vercel_kv
+      - name: Display Project ID
+        run: echo ${{ steps.get_project_id_from_vercel_kv.outputs.VERCEL_PROJECT_ID }}
+    outputs:
+      VERCEL_PROJECT_ID: ${{ steps.get_project_id_from_vercel_kv.outputs.VERCEL_PROJECT_ID }}
+
+  deploy-vercel-environment:
+    runs-on: ubuntu-latest
+    needs: setup-vercel-environment
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: List Directory
+        run: ls -la
+      - name: Display Project ID
+        run: echo ${{ needs.setup-vercel-environment.outputs.VERCEL_PROJECT_ID }}
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+            VERCEL_PROJECT_ID: ${{ needs.setup-vercel-environment.outputs.VERCEL_PROJECT_ID }}
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      - name: Display Pulled Vercel Info
+        run: cat .vercel/project.json
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+            VERCEL_PROJECT_ID: ${{ needs.setup-vercel-environment.outputs.VERCEL_PROJECT_ID }}
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+            VERCEL_PROJECT_ID: ${{ needs.setup-vercel-environment.outputs.VERCEL_PROJECT_ID }}
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
