@@ -4,17 +4,13 @@
     "title": "Getting Started",
     "type": "separator"
   },
-  "mm": "Add Form Testnet to Metamask",
-  "faucet": "Receive Faucet Funds",
-  "bridgeTo": "Bridge to Form Testnet",
-  "deploy": "Deploy to Form Testnet",
-  "indexers": "Data Indexers",
-  "oracles": "Oracles",
-  "aa": "Account Abstraction",
+  "mm": "Add Xterio Chain to Metamask",
+  "bridging": "Bridging for Xterio Chain",
+  "deploy": "Deploy to Xterio Chain",
   "website": {
     "title": "Website ↗",
     "type": "page",
-    "href": "https://form.network/",
+    "href": "https://xter.io/",
     "newWindow": true
   },
   "sepB": {
@@ -23,17 +19,17 @@
   },
   "explorer": {
     "title": "Block Explorer ↗",
-    "href": "https://explorer.form.network/",
+    "href": "https://xterscan.io",
     "newWindow": true
   },
   "bridge": {
     "title": "Bridge UI ↗",
-    "href": "https://bridge.form.network/",
+    "href": "https://bridge.xter.io/",
     "newWindow": true
   },
   "info": {
     "title": "Rollup Info Page ↗",
-    "href": "https://rollup-info.altlayer.io/public/cdk_eigenda_sepolia_testnet",
+    "href": "https://rollup-info.altlayer.io/garment-primary-minute/xterio",
     "newWindow": true
   }
 }
