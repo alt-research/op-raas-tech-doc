@@ -1,0 +1,22 @@
+name: One Time Setup Of Vercel Project Environment On Branch Creation
+
+on:
+  create:
+    branches:
+      - 'release/vercel/*'
+
+jobs:
+  create-environment:
+    if: ${{ contains(github.ref, 'refs/heads/release/vercel/') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Make Script Runnable
+        run: chmod a+x ./scripts/one_time_setup.sh
+      - name: One Time Setup
+        run: ./scripts/one_time_setup.sh
+        env:
+            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+            GH_VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_KV_ENDPOINT: ${{ secrets.VERCEL_KV_ENDPOINT }}
+            VERCEL_KV_AUTHORIZATION_KEY: ${{ secrets.VERCEL_KV_AUTHORIZATION_KEY }}
