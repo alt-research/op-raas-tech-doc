@@ -1,4 +1,4 @@
-# NWhitelabelled RAAS docs
+# Whitelabelled RAAS docs
 
 [![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
 
