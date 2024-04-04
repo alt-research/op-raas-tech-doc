@@ -35,8 +35,18 @@ jobs:
     needs: setup-vercel-environment
     steps:
       - uses: actions/checkout@v2
+      - name Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
       - name: Install Vercel CLI
-        run: npm install --global vercel@latest
+        run: pnpm install --global vercel@latest
       - name: List Directory
         run: ls -la
       - name: Display Project ID
