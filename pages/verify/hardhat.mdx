@@ -1,0 +1,62 @@
+# Verify using Hardhat
+
+This project is a demonstration of how to verify a contract on blockscout using hardhat.
+
+1. Clone repository
+    ```
+    git clone https://github.com/alt-research/contract-verify-sample.git
+    ```
+
+2. Navigate to `hardhat` folder
+    ```
+    cd hardhat
+    ```
+
+3. Install dependencies
+    ```
+    yarn
+    ```
+
+4. Configure the network
+    ```
+    networks: {
+        xterio: {
+        url: 'https://xterio.alt.technology',
+        chainId: 112358,
+        // test account: 0x3d96d0e5932A20518E60f39ef3AbF81a37C6231E
+        accounts: ["0xfed4030d3379f87b009e9011b83c9e89a9d16411b039e7ca718453c2bd0d3aac"],
+        }
+    },
+    ```
+
+5. Configure etherscan
+    ```
+    etherscan: {
+    // dummy key "abc"
+    apiKey: {
+      xterio: "abc",
+    },
+    customChains: [
+      {
+        network: "xterio",
+        chainId: 112358,
+        urls: {
+          apiURL: "https://xterio.alt.technology",
+          browserURL: "https://xterscan.io"
+        }
+      },
+    ]
+    }
+    ```
+
+6. Deploy sample contract
+    ```
+    yarn hardhat run script/deploy.ts --network xterio 
+
+    // deploy address = 0xf3C5b2fbFC3944c4134fA3553Ff2cf15CD86C1D7
+    ```
+
+7. Verify sample contract
+    ```
+    yarn hardhat verify --contract contracts/Counter.sol:Counter 0x91f4e4E26024b084a277c95a873Bd3c15c3206c3 --network xterio
+    ```

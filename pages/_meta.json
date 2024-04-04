@@ -7,6 +7,7 @@
   "mm": "Add Xterio Chain to Metamask",
   "bridging": "Bridging for Xterio Chain",
   "deploy": "Deploy to Xterio Chain",
+  "verify": "Verify contract on Blockscout",
   "website": {
     "title": "Website ↗",
     "type": "page",

@@ -1,0 +1,30 @@
+# Verify using Foundry
+
+This project is a demonstration of how to verify a contract on blockscout using foundry.
+
+1. Clone repository
+    ```
+    git clone https://github.com/alt-research/contract-verify-sample.git
+    ```
+
+2. Navigate to `foundry` folder
+    ```
+    cd foundry
+    ```
+
+3. Install dependencies
+    ```
+    forge install
+    ```
+
+4. Deploy sample contract
+    ```
+    forge create --rpc-url https://xterio.alt.technology --private-key 0xfed4030d3379f87b009e9011b83c9e89a9d16411b039e7ca718453c2bd0d3aac src/Counter.sol:Counter
+
+    // deploy address = 0x52B04768006c54D93885597e6B3189fD176A52F8
+    ```
+
+7. Verify sample contract
+    ```
+    forge verify-contract --verifier blockscout --verifier-url https://xterscan.io/api --chain-id 112358 0x52B04768006c54D93885597e6B3189fD176A52F8 src/Counter.sol:Counter
+    ```
