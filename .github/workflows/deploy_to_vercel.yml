@@ -44,7 +44,7 @@ jobs:
         id: pnpm-install
         with:
           version: 7
-          run_install: false
+          run_install: true
       - name: Install Vercel CLI
         run: pnpm add --global vercel@latest
       - name: List Directory
