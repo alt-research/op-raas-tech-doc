@@ -35,7 +35,7 @@ jobs:
     needs: setup-vercel-environment
     steps:
       - uses: actions/checkout@v2
-      - name Install Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
