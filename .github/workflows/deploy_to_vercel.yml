@@ -44,7 +44,9 @@ jobs:
         id: pnpm-install
         with:
           version: 7
-          run_install: true
+          run_install: false
+      - name: Install no lock file
+        run: pnpm install --no-frozen-lockfile
       - name: Install Vercel CLI
         run: pnpm add --global vercel@latest
       - name: List Directory
