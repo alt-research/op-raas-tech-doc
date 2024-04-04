@@ -46,7 +46,7 @@ jobs:
           version: 7
           run_install: false
       - name: Install Vercel CLI
-        run: pnpm install --global vercel@latest
+        run: pnpm add --global vercel@latest
       - name: List Directory
         run: ls -la
       - name: Display Project ID
