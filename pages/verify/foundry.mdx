@@ -1,6 +1,9 @@
 # Verify using Foundry
 
+Verifying a smart contract on the blockchain is an essential step to ensure its transparency, security and ease of interaction for users and other developers. 
+
 This project is a demonstration of how to verify a contract on blockscout using foundry.
+
 
 1. Clone repository
     ```
@@ -19,12 +22,28 @@ This project is a demonstration of how to verify a contract on blockscout using 
 
 4. Deploy sample contract
     ```
-    forge create --rpc-url https://xterio.alt.technology --private-key 0xfed4030d3379f87b009e9011b83c9e89a9d16411b039e7ca718453c2bd0d3aac src/Counter.sol:Counter
-
-    // deploy address = 0x52B04768006c54D93885597e6B3189fD176A52F8
+    forge create --rpc-url https://xterio-testnet.alt.technology/ --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 src/Counter.sol:Counter
+    // deploy address = 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
     ```
 
-7. Verify sample contract
+5. Verify sample contract
     ```
-    forge verify-contract --verifier blockscout --verifier-url https://xterscan.io/api --chain-id 112358 0x52B04768006c54D93885597e6B3189fD176A52F8 src/Counter.sol:Counter
+    forge verify-contract --verifier blockscout --verifier-url https://xterio-testnet-explorer.alt.technology/api --chain-id 1637450 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707 src/Counter.sol:Counter
     ```
+
+    The output looks like below:
+    ```
+    Start verifying contract `0x5FC8d32690cc91D4c39d9d3abcBD16989F875707` deployed on 1637450
+
+    Submitting verification for [src/Counter.sol:Counter] 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707.
+    Submitted contract for verification:
+	Response: `OK`
+	GUID: `5fc8d32690cc91d4c39d9d3abcbd16989f875707661fa406`
+	URL: https://xterio-testnet-explorer.alt.technology/address/0x5fc8d32690cc91d4c39d9d3abcbd16989f875707
+    ```
+
+6. Confirm verification 
+   
+   After executing the relevant command, visit the Mode explorer ([Mainnet](https://xterscan.io) / [Testnet](https://xterio-testnet-explorer.alt.technology/)) to see your contract's status.
+
+   ![image](../images/verify.png)

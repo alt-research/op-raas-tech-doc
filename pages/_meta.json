@@ -5,6 +5,8 @@
     "type": "separator"
   },
   "mm": "Add Xterio Chain to Metamask",
+  "contract": "Contract Addresses",
+  "faucet": "Faucet",
   "bridging": "Bridging for Xterio Chain",
   "deploy": "Deploy to Xterio Chain",
   "verify": "Verify contract on Blockscout",

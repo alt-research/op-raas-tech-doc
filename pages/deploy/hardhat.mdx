@@ -2,9 +2,17 @@
 
 ## What is Hardhat?
 
-Hardhat is a development environment for Ethereum that helps developers manage and automate the common tasks involved in building smart contracts and decentralized applications. It can directly interact with Xterio Chain's Ethereum API, allowing for the deployment of smart contracts into the Xterio Chain.
+[Hardhat](https://hardhat.org/) is a development environment for Ethereum that helps developers manage and automate the common tasks involved in building smart contracts and decentralized applications. It can directly interact with Xterio Chain's Ethereum API, allowing for the deployment of smart contracts into the Xterio Chain.
 
 Additionally, Hardhat is a comprehensive set of tools for creating Ethereum-based software, which includes various components that aid in editing, compiling, debugging, and deploying smart contracts and decentralized applications. All of these components work together to create a complete development environment.
+
+## Prerequisites
+
+Before we start, make sure you have met the following conditions:
+
+1. Have some tBNB on Xperio Testnet Network. You can follow our guide on [Bridging for Xterio Chain](https://whitelabel-raas-docs-release-vercel-xterio.vercel.app/bridging).
+
+2. Node.js and npm must be installed on your computer. If it's not, [follow this guide](https://nodejs.org/en).
 
 ## Creating a Hardhat Project
 
@@ -16,13 +24,14 @@ Additionally, Hardhat is a comprehensive set of tools for creating Ethereum-base
     ```
     npm init -y
     ```
-3. Install Hardhat
+
+3. Install Hardhat:
     ```
-    npm install hardhat
+    npm install --save-dev hardhat
     ```
-4. Create a project
+4. Start a new Hardhat project with TypeScript:
     ```
-    npx hardhat
+    npx hardhat init
     ```
 5. Create an empty `hardhat.config.js` and install the Ethers plugin to use the Ethers.js library to interact with the network.
     ```
@@ -78,6 +87,11 @@ Modify the Hardhat configuration file and create a secure file to store your pri
     },
     }
     ```
+
+> **Notice：**
+>
+> Avoid uploading your `hardhat.config.ts` file to GitHub or disclosing your private key to others. It's a frequent error to accidentally push your private key to GitHub, so ensure you include `hardhat.config.ts` in your `.gitignore` file to prevent this.
+
 
 ## Deploying Your Smart Contract
 
