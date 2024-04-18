@@ -4,10 +4,14 @@
     "title": "Getting Started",
     "type": "separator"
   },
-  "mm": "Add Xterio Chain to Metamask",
+  "using_mainnet": "Using Xterio Mainnet",
+  "using_testnet": "Using Xterio Testnet",
   "contract": "Contract Addresses",
-  "faucet": "Faucet",
   "bridging": "Bridging for Xterio Chain",
+  "sepB": {
+    "title": "Build on Xterio",
+    "type": "separator"
+  },
   "deploy": "Deploy to Xterio Chain",
   "verify": "Verify contract on Blockscout",
   "website": {
@@ -16,7 +20,7 @@
     "href": "https://xter.io/",
     "newWindow": true
   },
-  "sepB": {
+  "sepC": {
     "title": "Tools",
     "type": "separator"
   },

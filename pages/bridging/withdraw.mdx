@@ -1,59 +1,61 @@
 # Withdraw from Xterio Chain
 
-Bridging assets from Xterio Chain takes around 7 days.
+Bridging assets from Xterio Chain takes around **7 days**.
 
-The whole process requires two steps. The two-step withdrawal process is designed to ensure the safety and integrity of cross-chain transactions.
+To bridge funds from Xterio Chain you can use our Bridge ([Mainnet](https://bridge.xter.io/withdraw) / [Testnet](https://op-bridge.alt.technology/withdraw?id=1637450)). The whole process requires two steps, the two-step withdrawal process is designed to ensure the safety and integrity of cross-chain transactions.
 
 ## Step 1: Initiate withdrawal
 
-First, Connect your wallet to the Xterio Bridge ([Mainnet]((https://bridge.xter.io/withdraw)) / [Testnet](https://op-bridge.alt.technology/withdraw?id=1637450)). Make sure you've already switched the network to Xterio Chain.
+First, Connect your wallet ([Mainnet](../using_mainnet) / [Testnet](../using_testnet)) to the Xterio Bridge. Make sure you've already switched the network to Xterio Chain.
 
 Then, fill in the amount of BNB that you want to bridge. Ensure you have a positive balance of BNB on the Xterio Chain.
 
-Click on "Withdraw" and wait for the transaction to go through.
+Click on **Withdraw** and wait for the transaction to go through.
 
-![image](../images/bridgeout.png)  
+<img src="/bridgeout.png" width="500" />
   
-When the transaction is successful, the transaction details can be seen by clicking on the "View recent transactions".
+When the transaction is successful, the transaction details can be seen by clicking on the **View recent transactions**.
 
-![image](../images/withdraw_details.png)  
+<img src="/withdraw_details.png" width="800" />
 
-1. Click on the Txn Hash itself, it will jump to [BscScan](https://bscscan.com/) Transaction Detials page.
-2. Click on "view", it will jump to transaction status page below.
+1. Click on the Txn Hash itself, it will jump to [XterScan](https://xterscan.io) Transaction Detials page.
+2. Click on **view**, it will jump to transaction status page below.
 
-### Understanding the individual status of withdrawals
+### Understand the individual status of withdrawals
 
 #### Stage 1:  Waiting for state root to be published
-
-![image](../images/withdrawal_status_1.png)
 State root is a cryptographic commitment to the entire state of the L2 system at a specific block height. This root is then published to the L1 blockchain, where it is secured by L1's consensus mechanism and can be challenged later.
+<img src="/withdrawal_status_1.png" width="500" />
+
 
 #### Stage 2: Ready for prove
 
-![image](../images/withdrawal_status_2.png)
-After waiting for 1 hour, your transaction should be on the stage of "Ready for prove".
 
-Click on the "Prove Message" button and submit a transaction, this will turn to Stage 3.
+After waiting for **1 hour**, your transaction should be on the stage of "Ready for prove".
+Click on the **Prove Message** button and submit a transaction, this will turn to Stage 3.
+
+<img src="/withdrawal_status_2.png" width="500" />
+
 
 #### Stage 3: Waiting for challenge period. 
 
-![image](../images/withdrawal_status_3.png)
-
 [Challenge period](https://docs.optimism.io/builders/app-developers/bridging/messaging#understanding-the-challenge-period) is crucial for ensuring the integrity and security of the transactions. 
+The challenge period may last for **7 days**.
 
-After 7 days of challenge period, the withdrawal is deemed valid and is finalized on the blockchain. Now let's turn to Step 2.
+<img src="/withdrawal_status_3.png" width="500" />
+
 
 
 ## Step 2: Finalise withdrawal
 
-From now on, the withdrawal can be finalized on the L1. 
+**7 days** later, the withdrawal is deemed valid and is finalized on the blockchain.
+Click on **Finalize Message** in the transaction status page to complete the withdrawal finalization process.
 
-Click on "Finalize Message" in the transaction status page, to complete the withdrawal finalization process.
-
+<img src="/withdrawal_status_4.png" width="500" />
+<br/>
 You should see the funds in your wallet on the BSC network shortly. 
 
-![image](../images/withdrawal_status_4.png)
-![image](../images/withdrawal_status_5.png)
+<img src="/withdrawal_status_5.png" width="500" />
 
 
 

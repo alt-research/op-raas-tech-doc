@@ -6,11 +6,13 @@
 
 Additionally, Hardhat is a comprehensive set of tools for creating Ethereum-based software, which includes various components that aid in editing, compiling, debugging, and deploying smart contracts and decentralized applications. All of these components work together to create a complete development environment.
 
+In this example, let's deploy a simple contract in Xterio Testnet.
+
 ## Prerequisites
 
 Before we start, make sure you have met the following conditions:
 
-1. Have some tBNB on Xperio Testnet Network. You can follow our guide on [Bridging for Xterio Chain](https://whitelabel-raas-docs-release-vercel-xterio.vercel.app/bridging).
+1. Have some tBNB on Xterio Testnet Network. You can follow our guide on [Bridging for Xterio Chain](../bridging/deposit).
 
 2. Node.js and npm must be installed on your computer. If it's not, [follow this guide](https://nodejs.org/en).
 
@@ -81,8 +83,8 @@ Modify the Hardhat configuration file and create a secure file to store your pri
             accounts: [privateKey]
         },
         xterio: {
-            url: "https://xterio.alt.technology",  // Xterio Chain RPC URL Here
-            chainId: 112358, // Xterio ChainID Here
+            url: "https://xterio-testnet.alt.technology/",  // Xterio Chain RPC URL Here
+            chainId: 1637450, // Xterio ChainID Here
         }
     },
     }

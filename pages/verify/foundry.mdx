@@ -5,28 +5,28 @@ Verifying a smart contract on the blockchain is an essential step to ensure its 
 This project is a demonstration of how to verify a contract on blockscout using foundry.
 
 
-1. Clone repository
+#### 1. Clone repository
     ```
     git clone https://github.com/alt-research/contract-verify-sample.git
     ```
 
-2. Navigate to `foundry` folder
+#### 2. Navigate to `foundry` folder
     ```
     cd foundry
     ```
 
-3. Install dependencies
+#### 3. Install dependencies
     ```
     forge install
     ```
 
-4. Deploy sample contract
+#### 4. Deploy sample contract
     ```
     forge create --rpc-url https://xterio-testnet.alt.technology/ --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 src/Counter.sol:Counter
     // deploy address = 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
     ```
 
-5. Verify sample contract
+#### 5. Verify sample contract
     ```
     forge verify-contract --verifier blockscout --verifier-url https://xterio-testnet-explorer.alt.technology/api --chain-id 1637450 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707 src/Counter.sol:Counter
     ```
@@ -42,8 +42,9 @@ This project is a demonstration of how to verify a contract on blockscout using 
 	URL: https://xterio-testnet-explorer.alt.technology/address/0x5fc8d32690cc91d4c39d9d3abcbd16989f875707
     ```
 
-6. Confirm verification 
+#### 6. Confirm verification 
    
-   After executing the relevant command, visit the Mode explorer ([Mainnet](https://xterscan.io) / [Testnet](https://xterio-testnet-explorer.alt.technology/)) to see your contract's status.
+   After executing the relevant command, visit the Xterio explorer ([Mainnet](https://xterscan.io) / [Testnet](https://xterio-testnet-explorer.alt.technology/)) to see your contract's status.
 
-   ![image](../images/verify.png)
+<br/>
+<img src="/verify.png" width="800" />

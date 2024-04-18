@@ -4,22 +4,22 @@ Verifying a smart contract on the blockchain is an essential step to ensure its 
 
 This project is a demonstration of how to verify a contract on blockscout using hardhat.
 
-1. Clone repository
+#### 1. Clone repository
     ```
     git clone https://github.com/alt-research/contract-verify-sample.git
     ```
 
-2. Navigate to `hardhat` folder
+#### 2. Navigate to `hardhat` folder
     ```
     cd hardhat
     ```
 
-3. Install dependencies
+#### 3. Install dependencies
     ```
     yarn
     ```
 
-4. Modify the `network` part in `hardhat.config.ts`
+#### 4. Modify the `network` part in `hardhat.config.ts`
     ```
     networks: {
         xterio: {
@@ -31,7 +31,7 @@ This project is a demonstration of how to verify a contract on blockscout using 
     },
     ```
 
-5. Configure etherscan
+#### 5. Configure etherscan
     ```
     etherscan: {
     // dummy key "abc"
@@ -51,19 +51,19 @@ This project is a demonstration of how to verify a contract on blockscout using 
     }
     ```
 
-6. Deploy sample contract
+#### 6. Deploy sample contract
     ```
     npx hardhat run deploy.ts 
     // deploy address = 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
     ```
 
-7. Verify sample contract
+#### 7. Verify sample contract
     ```
     npx hardhat verify --network xterio 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
     ```
 
-8. Confirm verification 
+#### 8. Confirm verification 
    
    After executing the relevant command, visit the Mode explorer ([Mainnet](https://xterscan.io) / [Testnet](https://xterio-testnet-explorer.alt.technology/)) to see your contract's status.
-
-   ![image](../images/verify.png)
+<br/>
+<img src="/verify.png" width="800" />
