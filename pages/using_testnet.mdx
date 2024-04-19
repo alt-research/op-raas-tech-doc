@@ -1,20 +1,23 @@
-# Using Xterio Testnet
+import EnvLink from '../components/EnvLink';
+import EnvText from '../components/EnvText';
+
+# Using <EnvText envKey="projectName"/> Testnet
 
 ## Network details
 
 | Parameter | Value |
 | --- | --- |
-| Network Name | Xterio Chain |
-| RPC URL | https://xterio-testnet.alt.technology/ |
-| Chain ID | 1637450 |
-| Currency Symbol | BNB |
-| Block explorer URL | https://xterio-testnet-explorer.alt.technology/ |
+| Network Name | <EnvText envKey="networkName"/> |
+| RPC URL | <EnvText envKey="rpcUrlTestnet"/> |
+| Chain ID | <EnvText envKey="chainIDTestnet"/> |
+| Currency Symbol | <EnvText envKey="symbolMainnet"/> |
+| Block explorer URL | <EnvText envKey="explorerTestnet"/> |
 
-## Add Xterio Testnet to MetaMask
+## Add <EnvText envKey="projectName"/> Testnet to MetaMask
 
-### Using the Xterio Chain Rollup Info Page
+### Using the <EnvText envKey="networkName"/> Rollup Info Page
 
-1. Navigate to our [Rollup Info Page](https://rollup-info.altlayer.io/best-garment-primary/xterio_testnet)
+1. Navigate to our <EnvLink envKey="rollupInfoPageTestnet">Rollup Info Page</EnvLink>
 2. Click on the "**Add to Wallet**" button
 
 <img src="/addwallet_testnet.jpg" width="500" />
@@ -25,6 +28,6 @@ You can add the network manually using the above-mentioned network details.
 
 ## Faucet
 
-If you need some BSC Testnet tokens, request from [BNB FAUCET](https://www.bnbchain.org/en/testnet-faucet), and bridge to Xterio Testnet.
+If you need some BSC Testnet tokens, request from [BNB FAUCET](https://www.bnbchain.org/en/testnet-faucet), and bridge to <EnvText envKey="projectName"/> Testnet.
 
 <img src="/faucet.png" width="500" />

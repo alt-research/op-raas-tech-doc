@@ -4,15 +4,15 @@
     "title": "Getting Started",
     "type": "separator"
   },
-  "using_mainnet": "Using Xterio Mainnet",
-  "using_testnet": "Using Xterio Testnet",
+  "using_mainnet": "Using Mainnet",
+  "using_testnet": "Using Testnet",
   "contract": "Contract Addresses",
-  "bridging": "Bridging for Xterio Chain",
+  "bridging": "Bridging",
   "sepB": {
-    "title": "Build on Xterio",
+    "title": "Build on Chain",
     "type": "separator"
   },
-  "deploy": "Deploy to Xterio Chain",
+  "deploy": "Deploy a Smart Contract",
   "verify": "Verify contract on Blockscout",
   "website": {
     "title": "Website ↗",

@@ -1,3 +1,6 @@
+import EnvLink from '../../components/EnvLink';
+import EnvText from '../../components/EnvText';
+
 # Verify using Hardhat
 
 Verifying a smart contract on the blockchain is an essential step to ensure its transparency, security and ease of interaction for users and other developers. 
@@ -22,10 +25,9 @@ This project is a demonstration of how to verify a contract on blockscout using 
 #### 4. Modify the `network` part in `hardhat.config.ts`
     ```
     networks: {
-        xterio: {
-        url: 'https://xterio.alt.technology',
-        chainId: 112358,
-        // test account: 0x3d96d0e5932A20518E60f39ef3AbF81a37C6231E
+        testnet: {
+        url: '', // fill in rpc url
+        chainId: 123, // fill in sample chain id
         accounts: ["0xfed4030d3379f87b009e9011b83c9e89a9d16411b039e7ca718453c2bd0d3aac"],
         }
     },
@@ -36,15 +38,15 @@ This project is a demonstration of how to verify a contract on blockscout using 
     etherscan: {
     // dummy key "abc"
     apiKey: {
-      xterio: "abc",
+      testnet: "abc",
     },
     customChains: [
       {
-        network: "xterio",
-        chainId: 112358,
+        network: "testnet",
+        chainId: 123, // sample chain id
         urls: {
-          apiURL: "https://xterio.alt.technology",
-          browserURL: "https://xterscan.io"
+          apiURL: "", // fill in rpc url
+          browserURL: "" // fill in explorer url
         }
       },
     ]
@@ -59,11 +61,11 @@ This project is a demonstration of how to verify a contract on blockscout using 
 
 #### 7. Verify sample contract
     ```
-    npx hardhat verify --network xterio 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+    npx hardhat verify --network testnet 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
     ```
 
 #### 8. Confirm verification 
    
-   After executing the relevant command, visit the Mode explorer ([Mainnet](https://xterscan.io) / [Testnet](https://xterio-testnet-explorer.alt.technology/)) to see your contract's status.
+   After executing the relevant command, visit the <EnvText envKey="projectName"/> explorer (<EnvLink envKey="explorerMainnet">Mainnet</EnvLink> / <EnvLink envKey="explorerTestnet">Testnet</EnvLink>) to see your contract's status.
 <br/>
 <img src="/verify.png" width="800" />

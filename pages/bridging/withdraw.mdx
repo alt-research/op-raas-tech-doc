@@ -1,14 +1,17 @@
-# Withdraw from Xterio Chain
+import EnvLink from '../../components/EnvLink';
+import EnvText from '../../components/EnvText';
 
-Bridging assets from Xterio Chain takes around **7 days**.
+# Withdraw from <EnvText envKey="networkName"/>
 
-To bridge funds from Xterio Chain you can use our Bridge ([Mainnet](https://bridge.xter.io/withdraw) / [Testnet](https://op-bridge.alt.technology/withdraw?id=1637450)). The whole process requires two steps, the two-step withdrawal process is designed to ensure the safety and integrity of cross-chain transactions.
+Bridging assets from <EnvText envKey="networkName"/> takes around **7 days**.
+
+To bridge funds from <EnvText envKey="networkName"/> you can use our Bridge (<EnvLink envKey="bridgeWithdrawUrlMainnet">Mainnet</EnvLink> / <EnvLink envKey="bridgeWithdrawUrlTestnet">Testnet</EnvLink>). The whole process requires two steps, the two-step withdrawal process is designed to ensure the safety and integrity of cross-chain transactions.
 
 ## Step 1: Initiate withdrawal
 
-First, Connect your wallet ([Mainnet](../using_mainnet) / [Testnet](../using_testnet)) to the Xterio Bridge. Make sure you've already switched the network to Xterio Chain.
+First, Connect your wallet ([Mainnet](../using_testnet) / [Testnet](../using_testnet)) to the <EnvText envKey="networkName"/> to the <EnvText envKey="projectName"/> Bridge. Make sure you've already switched the network to <EnvText envKey="networkName"/>.
 
-Then, fill in the amount of BNB that you want to bridge. Ensure you have a positive balance of BNB on the Xterio Chain.
+Then, fill in the amount of <EnvText envKey="symbolMainnet"/> that you want to bridge. Ensure you have a positive balance of <EnvText envKey="symbolMainnet"/> on the <EnvText envKey="networkName"/>.
 
 Click on **Withdraw** and wait for the transaction to go through.
 
@@ -18,7 +21,7 @@ When the transaction is successful, the transaction details can be seen by click
 
 <img src="/withdraw_details.png" width="800" />
 
-1. Click on the Txn Hash itself, it will jump to [XterScan](https://xterscan.io) Transaction Detials page.
+1. Click on the Txn Hash itself, it will jump to <EnvLink envKey="l2Explorer">transaction detials page</EnvLink>.
 2. Click on **view**, it will jump to transaction status page below.
 
 ### Understand the individual status of withdrawals
@@ -53,7 +56,7 @@ Click on **Finalize Message** in the transaction status page to complete the wit
 
 <img src="/withdrawal_status_4.png" width="500" />
 <br/>
-You should see the funds in your wallet on the BSC network shortly. 
+You should see the funds in your wallet on the <EnvText envKey="l1"/> network shortly. 
 
 <img src="/withdrawal_status_5.png" width="500" />
 

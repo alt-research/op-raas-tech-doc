@@ -1,18 +1,21 @@
+import EnvLink from '../../components/EnvLink';
+import EnvText from '../../components/EnvText';
+
 # Foundry
 
 ## What is Foundry?
 
 [Foundry](https://book.getfoundry.sh/) is a toolset for Ethereum development written in Rust that assists developers in managing dependencies, compiling projects, running tests, deploying contracts, and interacting with blockchains through the command line interface.
 
-Additionally, Foundry can directly communicate with Xterio Chain's Ethereum API, enabling the use of Foundry to deploy smart contracts into Xterio Chain.
+Additionally, Foundry can directly communicate with <EnvText envKey="networkName"/>'s Ethereum API, enabling the use of Foundry to deploy smart contracts into <EnvText envKey="networkName"/>.
 
-In this example, let's deploy a simple contract in Xterio Testnet.
+In this example, let's deploy a simple contract in <EnvText envKey="projectName"/> Testnet.
 
 ## Prerequisites
 
 Before we start, make sure you have met the following conditions:
 
-1. Have some tBNB on Xterio Testnet Network. You can follow our guide on [Bridging for Xterio Chain](../bridging/deposit).
+1. Have some <EnvText envKey="symbolTestnet"/> on <EnvText envKey="projectName"/> Testnet Network. You can follow our guide on <EnvLink envKey="bridgeDepositUrl">Bridging for <EnvText envKey="networkName"/></EnvLink>.
 2. Rust must be installed on your computer. If it's not, [follow this guide](https://doc.rust-lang.org/book/ch01-01-installation.html).
 3. Foundry must be installed on your computer. If it’s not, [follow this guide](https://book.getfoundry.sh/getting-started/installation).
 
@@ -69,10 +72,10 @@ For example, the `MyToken.sol` contract requires an initial supply of tokens to 
 
 
 
-To deploy the `MyToken.sol` contract, use the command that corresponds to Xterio Chain's RPC URL while running the `forge create` command:
+To deploy the `MyToken.sol` contract, use the command that corresponds to <EnvText envKey="networkName"/>'s RPC URL while running the `forge create` command:
 
 ```
-forge create --rpc-url "https://xterio-testnet.alt.technology/"
+forge create --rpc-url "https://<EnvText envKey="projectName"/>-testnet.alt.technology/"
 --constructor-args 100 \
 --private-key YOUR_PRIVATE_KEY \
 src/MyToken.sol:MyToken 

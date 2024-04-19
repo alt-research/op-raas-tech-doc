@@ -1,20 +1,24 @@
-# Using Xterio Mainnet
+import EnvLink from '../components/EnvLink';
+import EnvText from '../components/EnvText';
+
+
+# Using <EnvText envKey="projectName"/> Mainnet
 
 ## Network details
 
 | Parameter | Value |
 | --- | --- |
-| Network Name | Xterio Chain |
-| RPC URL | https://xterio.alt.technology |
-| Chain ID | 112358 |
-| Currency Symbol | BNB |
-| Block explorer URL | https://xterscan.io |
+| Network Name | <EnvText envKey="networkName"/> |
+| RPC URL | <EnvText envKey="rpcUrlMainnet"/> |
+| Chain ID | <EnvText envKey="chainIDMainnet"/> |
+| Currency Symbol | <EnvText envKey="symbolMainnet"/> |
+| Block explorer URL | <EnvText envKey="explorerMainnet"/> |
 
-## Add Xterio Mainnet to MetaMask
+## Add <EnvText envKey="projectName"/> Mainnet to MetaMask
 
-### Using the Xterio Chain Rollup Info Page
+### Using the <EnvText envKey="networkName"/> Rollup Info Page
 
-1. Navigate to our [Rollup Info Page](https://rollup-info.altlayer.io/garment-primary-minute/xterio):
+1. Navigate to our <EnvLink envKey="rollupInfoPageMainnet">Rollup Info Page</EnvLink>:
 2. Click on the "**Add to Wallet**" button
 
 <img src="/addwallet_mainnet.png" width="500" />

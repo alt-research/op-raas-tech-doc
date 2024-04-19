@@ -1,12 +1,15 @@
-# Deposit to Xterio Chain
+import EnvLink from '../../components/EnvLink';
+import EnvText from '../../components/EnvText';
 
-Bridging assets to Xterio Chain takes less than **5 minutes**.
+# Deposit to <EnvText envKey="networkName"/>
 
-To bridge funds to Xterio Chain you can use our Bridge ([Mainnet](https://bridge.xter.io/deposit) / [Testnet](https://op-bridge.alt.technology/deposit?id=1637450)) and follow these steps:
+Bridging assets to <EnvText envKey="networkName"/> takes less than **5 minutes**.
 
-1. Connect your wallet ([Mainnet](../using_mainnet) / [Testnet](../using_testnet)) to the Xterio Bridge.
-2. Make sure you select the right asset that you want to bridge and that the **From** chain is BSC.
-3. Fill in the amount of BNB that you want to bridge. Ensure you have a positive balance of BNB on the BSC Chain.
+To bridge funds to <EnvText envKey="networkName"/> you can use our Bridge (<EnvLink envKey="bridgeDepositUrlMainnet">Mainnet</EnvLink> / <EnvLink envKey="bridgeDepositUrlTestnet">Testnet</EnvLink>) and follow these steps:
+
+1. Connect your wallet ([Mainnet](../using_testnet) / [Testnet](../using_testnet)) to the <EnvText envKey="networkName"/> Bridge.
+2. Make sure you select the right asset that you want to bridge and that the **From** chain is <EnvText envKey="l1"/>.
+3. Fill in the amount of <EnvText envKey="symbolMainnet"/> that you want to bridge. Ensure you have a positive balance of <EnvText envKey="symbolMainnet"/> on the <EnvText envKey="symbolMainnet"/> Chain.
 4. Click on **Deposit** and wait for the transaction to go through.
 
 <img src="/bridgein.png" width="500" />
@@ -16,7 +19,7 @@ When the transaction is successful, the transaction details can be seen by click
 
 <img src="/deposit_details.png" width="800" />
 
-1. Click on the Txn Hash itself, it will jump to [BscScan](https://bscscan.com/) Transaction Detials page.
+1. Click on the Txn Hash itself, it will jump to <EnvLink envKey="l1Explorer">transaction detials page</EnvLink>.
 2. Click on **view**, it will jump to transaction status page below.
 
 <img src="/deposit_progress.png" width="500" />
