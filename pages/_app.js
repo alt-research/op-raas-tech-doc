@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }) {
     explorerTestnet: process.env.NEXT_PUBLIC_EXPLORER_TESTNET,
     bridgeDepositUrlTestnet: process.env.NEXT_PUBLIC_BRIDGE_DEPOSIT_URL_TESTNET,
     bridgeWithdrawUrlTestnet: process.env.NEXT_PUBLIC_BRIDGE_WITHDRAW_URL_TESTNET,
+    faucet: process.env.NEXT_PUBLIC_FAUCET_URL,
 
     // internal page env
     bridgeDepositUrl: process.env.NEXT_PUBLIC_BRIDGE_DEPOSIT_URL,

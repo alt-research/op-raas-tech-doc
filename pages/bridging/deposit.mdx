@@ -12,16 +12,23 @@ To bridge funds to <EnvText envKey="networkName"/> you can use our Bridge (<EnvL
 3. Fill in the amount of <EnvText envKey="symbolMainnet"/> that you want to bridge. Ensure you have a positive balance of <EnvText envKey="symbolMainnet"/> on the <EnvText envKey="symbolMainnet"/> Chain.
 4. Click on **Deposit** and wait for the transaction to go through.
 
-<img src="/bridgein.png" width="500" />
+<img src="/bridgein.png" width="400" />
+
+<img src="/deposit_confirm.png" width="400" />
 
 
-When the transaction is successful, the transaction details can be seen by clicking on the **View recent transactions**.
+When the transaction is successful, the transaction details can be seen by clicking on the **Activity**.
 
-<img src="/deposit_details.png" width="800" />
+<img src="/deposit_details.png" width="400" />
 
-1. Click on the Txn Hash itself, it will jump to <EnvLink envKey="l1Explorer">transaction detials page</EnvLink>.
-2. Click on **view**, it will jump to transaction status page below.
+Click on the **Depositing** or **Deposited**, it will jump to <EnvLink envKey="l1Explorer">transaction detials page</EnvLink>.
 
-<img src="/deposit_progress.png" width="500" />
+<img src="/deposit_status_1.png" width="400" />
 
- Wait less than **5 minutes** to see the transaction show up with the status **Deposit finalized**.
+
+ Wait less than **3 minutes** to see the transaction status **Waiting for L2 confirmation** turn to **L2 confirmation**. That's when the deposit turns finalized.
+
+ <img src="/deposit_status_2.png" width="400" />
+
+ <img src="/deposit_status_3.png" width="400" />
+

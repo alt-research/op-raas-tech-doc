@@ -15,50 +15,48 @@ Then, fill in the amount of <EnvText envKey="symbolMainnet"/> that you want to b
 
 Click on **Withdraw** and wait for the transaction to go through.
 
-<img src="/bridgeout.png" width="500" />
+<img src="/bridgeout.png" width="400" />
   
-When the transaction is successful, the transaction details can be seen by clicking on the **View recent transactions**.
+When the transaction is successful, the transaction details can be seen by clicking on the **Activity**.
 
-<img src="/withdraw_details.png" width="800" />
+<img src="/withdrawal_details.png" width="400" />
 
-1. Click on the Txn Hash itself, it will jump to <EnvLink envKey="l2Explorer">transaction detials page</EnvLink>.
-2. Click on **view**, it will jump to transaction status page below.
+Click on **Withdrawn**, it will jump to <EnvLink envKey="l2Explorer">transaction detials page</EnvLink>.
 
 ### Understand the individual status of withdrawals
 
 #### Stage 1:  Waiting for state root to be published
 State root is a cryptographic commitment to the entire state of the L2 system at a specific block height. This root is then published to the L1 blockchain, where it is secured by L1's consensus mechanism and can be challenged later.
-<img src="/withdrawal_status_1.png" width="500" />
+<img src="/withdrawal_status_1.png" width="400" />
 
 
 #### Stage 2: Ready for prove
 
 
-After waiting for **1 hour**, your transaction should be on the stage of "Ready for prove".
-Click on the **Prove Message** button and submit a transaction, this will turn to Stage 3.
+After waiting for the time displayed, your transaction should be on the stage of "Ready for prove".
+Click on the **Prove** button and submit a transaction, this will turn to Stage 3.
 
-<img src="/withdrawal_status_2.png" width="500" />
-
+<img src="/withdrawal_status_2.png" width="400" />
+<img src="/withdrawal_status_2_5.png" width="400" />
 
 #### Stage 3: Waiting for challenge period. 
 
 [Challenge period](https://docs.optimism.io/builders/app-developers/bridging/messaging#understanding-the-challenge-period) is crucial for ensuring the integrity and security of the transactions. 
-The challenge period may last for **7 days**.
+The challenge period may last for **7 days** in mainnet.
 
-<img src="/withdrawal_status_3.png" width="500" />
+<img src="/withdrawal_status_3.png" width="400" />
 
 
 
-## Step 2: Finalise withdrawal
+#### Stage 4: Finalise withdrawal
 
 **7 days** later, the withdrawal is deemed valid and is finalized on the blockchain.
-Click on **Finalize Message** in the transaction status page to complete the withdrawal finalization process.
+Click on **Finalize** in the transaction status page to complete the withdrawal finalization process.
 
-<img src="/withdrawal_status_4.png" width="500" />
-<br/>
+<img src="/withdrawal_status_4.png" width="400" />
 You should see the funds in your wallet on the <EnvText envKey="l1"/> network shortly. 
 
-<img src="/withdrawal_status_5.png" width="500" />
+<img src="/withdrawal_status_5.png" width="400" />
 
 
 

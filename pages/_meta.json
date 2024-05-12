@@ -6,7 +6,7 @@
   },
   "using_mainnet": "Using Mainnet",
   "using_testnet": "Using Testnet",
-  "contract": "Contract Addresses",
+  "contract": "Contract Metadata",
   "bridging": "Bridging",
   "sepB": {
     "title": "Build on Chain",
