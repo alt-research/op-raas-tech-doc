@@ -16,7 +16,6 @@
   "verify": "Verify contract on Blockscout",
   "website": {
     "title": "Website ↗",
-    "type": "page",
     "href": "https://xter.io/",
     "newWindow": true
   },
@@ -24,14 +23,11 @@
     "title": "Tools",
     "type": "separator"
   },
+  "bridge_outer": "Bridge UI",
+
   "explorer": {
     "title": "Block Explorer ↗",
     "href": "https://xterscan.io",
-    "newWindow": true
-  },
-  "bridge": {
-    "title": "Bridge UI ↗",
-    "href": "https://bridge.xter.io/",
     "newWindow": true
   },
   "info": {
