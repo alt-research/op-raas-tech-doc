@@ -7,7 +7,7 @@ const config: DocsThemeConfig = {
     logo: <span><EnvText envKey="networkName"/> Docs</span>,
   footer: {
     text: <EnvText envKey="networkName"/>,
-  },
+  }
 }
 
 export default config

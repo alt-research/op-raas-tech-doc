@@ -16,23 +16,28 @@
   "verify": "Verify contract on Blockscout",
   "website": {
     "title": "Website ↗",
-    "href": "https://xter.io/",
+    "href": "https://google.com",
     "newWindow": true
   },
   "sepC": {
     "title": "Tools",
     "type": "separator"
   },
-  "bridge_outer": "Bridge UI",
+  "bridge_outer": {
+    "title":"Bridge UI",
+    "theme": {
+      "layout": "full"
+    }
+  },
 
   "explorer": {
     "title": "Block Explorer ↗",
-    "href": "https://xterscan.io",
+    "href": "https://google.com",
     "newWindow": true
   },
   "info": {
     "title": "Rollup Info Page ↗",
-    "href": "https://rollup-info.altlayer.io/garment-primary-minute/xterio",
+    "href": "https://google.com",
     "newWindow": true
   }
 }

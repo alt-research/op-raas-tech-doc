@@ -8,6 +8,7 @@ This project has set project specific parameters as environment variable control
 Here are the steps:
 1. Direct to `pages/index.mdx` to fill in your own project information;
 2. Direct to `.env` to modify the environment value.
+3. Direct to `_meta.json` to add the links to your own website, explorer and rollup-info page.
 
 ## Local Development
 
