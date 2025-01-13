@@ -66,22 +66,3 @@ System contracts on Layer1 and Layer2 are an important part of the OP ecosystem.
 | SystemConfig                     | <EnvLink envKey="systemConfigUrlTestnet"><EnvText envKey="systemConfigContractTestnet"/></EnvLink> |
 | SystemConfigProxy                | <EnvLink envKey="systemConfigProxyUrlTestnet"><EnvText envKey="systemConfigProxyContractTestnet"/></EnvLink> |
 | SystemOwnerSafe                  | <EnvLink envKey="systemOwnerSafeUrlTestnet"><EnvText envKey="systemOwnerSafeContractTestnet"/></EnvLink> |
-
-
-## Key parameters
-
-| Name                             | Introduction                                 |
-|----------------------------------|----------------------------------------------|
-|l1BlockTime|the rollup block interval|
-|l2OutputOracleSubmissionInterval|The L2 block interval for submiting OutputRoot to L2OutputOracle (how many l2 block submit once)|
-|channelTimeout|Maximum number of L1 blocks that a transaction channel frame can be considered valid|
-|finalizationPeriodSeconds|Number of seconds that a proposal must be available to challenge before it is considered finalized by the OptimismPortal contract|
-|proxyAdminOwner|The proxy owner for layer1 contract, the most important key for op|
-|finalSystemOwner|The owner of the contract SystemConfig|
-|baseFeeVaultRecipient / l1FeeVaultRecipient / sequencerFeeVaultRecipient|The fee that the rollup withdraw from rollup users|
-|batchSenderAddress|Used in op-batcher to submit rollup block to layer1|
-|l2OutputOracleProposer|Used in op-proposer to submit OutputRoot to layer1|
-|gasPriceOracleOverhead|The initial value of the gas overhead in the GasPriceOracle predeploy|
-|gasPriceOracleScalar|The initial value of the gas scalar in the GasPriceOracle predeploy|
-|l2GenesisBlockGasLimit|Initial block gas limit|
-|l2GenesisBlockBaseFeePerGas|Initial base fee|
